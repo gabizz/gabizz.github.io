@@ -1,40 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en"  ng-app = "app">
   <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.7/angular-material.min.css">
+    <link rel="stylesheet" href="./main.css">
 
-    <!-- Material Design fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!-- Bootstrap Material Design -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css">
   </head>
-  <body>
-    <h1>Hello, people!</h1>
-    <div class="row  d-flex m-4 ">
-        <div class="col-sm-1"></div>
-        <div class="card d-flex text-center col-sm-10">
+  <body ng-controller="main" >
 
-        		<a  class = "btn btn-raised btn-primary btn-lg d-2 p-2 col-sm-12" href="./apps/service/index.html">WORKSHOP SERVICE APP - testing</a>
-        		<a  class = "btn btn-raised btn-primary btn-lg d-2 p-2 col-sm-12" href="./apps/legea17/index.html">Legea 17/2014</a>
+    <md-toolbar class="md-primary md-hue-2">
+      <div class="md-toolbar-tools">
+          MY "IN PROGRESS" PROJECTS
+          <span flex></span>
+          <small>Gabizz</small>
+      </div>
+    </md-toolbar>
 
+    <div class= "container">
+      <div layout = "row" layout-align="center center" layout-padding>
+          <h1>PROIECTE</h1>
+      </div>
+
+      <md-card class = "md-whiteframe-z3 md-padding" ng-repeat = "item in items">
+        <div class="md-card-title">
 
         </div>
+        <div class="md-card-contents" layout = "column" layout-align = "center center">
+            <md-button class="md-primary md-hue-4 md-raised" ng-href = 'item.link'>
+                <a href = "./apps/service/index.html" style = "text-decoration:none; color:white">{{item.name}}</a>
+
+
+            </md-button>
+              <small>{{item.desc}}</small>
+        </div>
+      </md-card>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"
+    integrity="sha256-1XBp/KwjxhvrtZiQ+ecAScAyLPe4OStn2lMX0vxTq9U=" crossorigin="anonymous"></script>
 
-    <!-- jQuery first, then tether, then Bootstrap Material Design JS. -->
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js"></script>
-    <script src="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.iife.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
-    <script>
-      $('body').bootstrapMaterialDesign();
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-aria.min.js"
+    integrity="sha256-9per5naK1wbvJeCJC4Xr3gjiycTRg9Jno/eSvh12+ck=" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.7/angular-material.min.js"
+    integrity="sha256-2cO++fbmPU3tWlegywo5i7nL8qJ3Ah0cJIuClx/7FQ0=" crossorigin="anonymous"></script>
+
+
+
+        <script src = "app.js" ></script>
+
   </body>
 </html>
