@@ -9,8 +9,13 @@ function main($scope) {
 $scope.items = [
 {
   name: "WORKSHOP SERVICE CUSTOMERS & ORDERS MANAGEMENT",
-  desc: "angular 5 app with and node.js (express/sequelize/sqlite) and oauth authentication",
+  desc: "angular 5 app with and node.js (express/sequelize/sqlite) and oauth authentication (NG BOOTSTRAP VERSION)",
   link: "./apps/service/index.html"
+},
+{
+  name: "WORKSHOP SERVICE CUSTOMERS & ORDERS MANAGEMENT",
+  desc: "angular 5 app with and node.js (express/sequelize/sqlite) and oauth authentication (ANGULAR 5 MATERIAL VERSION)",
+  link: "./apps/material/index.html"
 },
 {
     name: "EVIDENȚĂ DOSARE LEGEA 17/2014",
